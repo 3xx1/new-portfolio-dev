@@ -7,6 +7,7 @@ var gsap = require('gsap');
 
 // components
 // require components here
+require('./components/footer/footer.js');
 require('./components/navbar/navbar.js');
 
 // pages
@@ -22,6 +23,7 @@ var portfolio = angular.module('portfolio', [
   'templates',
   
   // components
+  'portfolio.footer',
   'portfolio.navbar'
 ]);
 
