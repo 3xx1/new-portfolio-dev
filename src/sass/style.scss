@@ -1,6 +1,6 @@
-// global variables
-$dark-gray: #333333;
-$white: #FFFFFF;
+// globals
+@import 'globals/_variables.scss';
+@import 'globals/_utils.scss';
 
 // partials import
 @import 'partials/_footer.scss';
