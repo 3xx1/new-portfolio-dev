@@ -1,11 +1,13 @@
 // dependencies
 var $ = require('jquery');
 var angular = require('angular');
-var gsap = require('gsap');
+var animate = require('angular-animate');
 var uiRouter = require('angular-ui-router');
+var gsap = require('gsap');
 
 // components
 // require components here
+require('./components/navbar/navbar.js');
 
 // pages
 // require pages here
@@ -15,6 +17,12 @@ var uiRouter = require('angular-ui-router');
 
 var portfolio = angular.module('portfolio', [
   
+  'ui.router',
+  'ngAnimate',
+  'templates',
+  
+  // components
+  'portfolio.navbar'
 ]);
 
 portfolio.config([
@@ -22,6 +30,11 @@ portfolio.config([
   '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
+    $stateProvider
+    .state('home', {
+      url: '/home',
+      template: '<p>home</p>'
+    });
     // $stateProvider.state('dashboard', {
     //   url: '/',
     //   template: '<tivr-dashboard></tivr-dashboard>'
