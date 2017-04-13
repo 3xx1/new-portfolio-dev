@@ -6,12 +6,13 @@ var uiRouter = require('angular-ui-router');
 var gsap = require('gsap');
 
 // components
-// require components here
 require('./components/footer/footer.js');
 require('./components/navbar/navbar.js');
 
 // pages
-// require pages here
+require('./pages/about/about.js');
+require('./pages/contact/contact.js');
+require('./pages/works/works.js');
 
 // utils
 // require utils here
@@ -24,33 +25,31 @@ var portfolio = angular.module('portfolio', [
   
   // components
   'portfolio.footer',
-  'portfolio.navbar'
+  'portfolio.navbar',
+  
+  // pages
+  'portfolio.about',
+  'portfolio.contact',
+  'portfolio.works'
 ]);
 
 portfolio.config([
   '$stateProvider',
   '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/works');
     $stateProvider
-    .state('home', {
-      url: '/home',
-      template: '<p>home</p>'
+    .state('about', {
+      url: '/about',
+      template: '<portfolio-about></portfolio-about>'
+    })
+    .state('contact', {
+      url: '/contact',
+      template: '<portfolio-contact></portfolio-contact>'
+    })
+    .state('works', {
+      url: '/works',
+      template: '<portfolio-works></portfolio-works>'
     });
-    // $stateProvider.state('dashboard', {
-    //   url: '/',
-    //   template: '<tivr-dashboard></tivr-dashboard>'
-    // })
-    // .state('pages', {
-    //   url: '/home',
-    //   template: function($scope) {
-    //     switch ($scope.id) {
-    //       // case "":
-    //       //   break;
-    //       default:
-    //         return '<tivr-screenshot></tivr-screenshot>';
-    //     }
-    //   }
-    // })
   }
 ]);
