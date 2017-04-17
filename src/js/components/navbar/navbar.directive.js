@@ -7,7 +7,11 @@ angular.module('portfolio.navbar.directive', [])
     restrict: 'E',
     templateUrl: 'navbar.template.html',
     controller: function($scope) {
+      $scope.currentRoute = 'works';
       
+      $scope.updateRoute = function(route) {
+        $scope.currentRoute = route;
+      };
     }
   };
 });

@@ -1,11 +1,10 @@
 <div class="navbar">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-6"></div>
-      <div class="col-sm-6">
-        <a href="#!/works"><span class="nav-item">Works</span></a>
-        <a href="#!/about"><span class="nav-item">About</span></a>
-        <a href="#!/contact"><span class="nav-item">Contact</span></a>
+      <div class="pull-right">
+        <a href="#!/works" ng-click="updateRoute('works')"><span class="nav-item-desktop" ng-class="{active: currentRoute == 'works'}">Works</span></a>
+        <a href="#!/about" ng-click="updateRoute('about')"><span class="nav-item-desktop" ng-class="{active: currentRoute == 'about'}">About</span></a>
+        <a href="#!/contact" ng-click="updateRoute('contact')"><span class="nav-item-desktop" ng-class="{active: currentRoute == 'contact'}">Contact</span></a>
       </div>
     </div>
   </div>
