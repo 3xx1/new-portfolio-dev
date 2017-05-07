@@ -1,12 +1,23 @@
 .navbar {
   padding: 30px 20px;
-  
+
   .nav-item-desktop {
     color: $medium-gray;
     padding: 20px 20px;
-    
+
     &.active {
       color: $dark-gray;
+    }
+  }
+
+  .language-selector {
+    margin-left: 50px;
+    span {
+      color: $light-gray;
+
+      &.highlight {
+        color: $dark-gray;
+      }
     }
   }
 }

@@ -1,10 +1,17 @@
 <div class="navbar">
   <div class="container-fluid">
     <div class="row">
-      <div class="pull-right">
-        <a href="#!/works" ng-click="updateRoute('works')"><span class="nav-item-desktop" ng-class="{active: currentRoute == 'works'}">Works</span></a>
-        <a href="#!/about" ng-click="updateRoute('about')"><span class="nav-item-desktop" ng-class="{active: currentRoute == 'about'}">About</span></a>
-        <a href="#!/contact" ng-click="updateRoute('contact')"><span class="nav-item-desktop" ng-class="{active: currentRoute == 'contact'}">Contact</span></a>
+      <div class="col-xs-12 hidden-xs">
+        <div class="pull-right language-selector">
+          <span class="highlight">EN</span>
+          <span>/</span>
+          <span>JP</span>
+        </div>
+        <div class="pull-right">
+          <a href="#!/works" ng-click="updateRoute('works')"><span class="nav-item-desktop" ng-class="{active: currentRoute == 'works'}">Works</span></a>
+          <a href="#!/about" ng-click="updateRoute('about')"><span class="nav-item-desktop" ng-class="{active: currentRoute == 'about'}">About</span></a>
+          <a href="#!/contact" ng-click="updateRoute('contact')"><span class="nav-item-desktop" ng-class="{active: currentRoute == 'contact'}">Contact</span></a>
+        </div>
       </div>
     </div>
   </div>
