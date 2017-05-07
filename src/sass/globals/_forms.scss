@@ -1,0 +1,25 @@
+label {
+  color: $medium-gray;
+}
+
+input[type="text"] {
+  border-radius: 0;
+  margin-bottom: 20px;
+  box-shadow: none;
+  
+  &:focus {
+    box-shadow: none;
+    border-color: $medium-gray;
+  }
+}
+
+textarea {
+  resize: none;
+  border-radius: 0;
+  box-shadow: none;
+  
+  &:focus {
+    box-shadow: none;
+    border-color: $medium-gray;
+  }
+}
