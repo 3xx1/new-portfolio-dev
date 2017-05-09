@@ -1,4 +1,14 @@
 .page-works {
+  .confidentiality-note {
+    background: $ultra-subtle-gray;
+    border-radius: 4px;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+
+    .glyphicon, p {
+      color: $medium-gray;
+    }
+  }
   .work-card {
     margin-bottom: 20px;
     border: 1px solid $light-gray;
@@ -15,6 +25,15 @@
     }
     &:hover {
       cursor: pointer;
+    }
+    @media (min-width: 768px) {
+      height: 360px;
+    }
+    @media (min-width: 992px) {
+      height: 350px;
+    }
+    @media (min-width: 1200px) {
+      height: 350px;
     }
   }
 }

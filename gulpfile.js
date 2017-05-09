@@ -37,6 +37,10 @@ var copyLocations = [
   {
     src: './node_modules/bootstrap/dist/css/bootstrap.css',
     dest: './public' + (process.env.NODE_ENV == 'local' ? '_local' : '') + '/css'
+  },
+  {
+    src: './node_modules/bootstrap/dist/fonts/*.*',
+    dest: './public' + (process.env.NODE_ENV == 'local' ? '_local' : '') + '/fonts'
   }
 ];
 
@@ -163,4 +167,3 @@ gulp.task('dev', ['clean'], function() {
   gulp.start('watchify');
   gulp.start('server');
 });
-
